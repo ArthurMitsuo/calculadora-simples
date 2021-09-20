@@ -1,0 +1,39 @@
+:root{
+    font-family: inconsolata;
+    font-weight: bold;
+    background-color: #1b1396;  
+}
+
+body{
+background-color: #1b1396;
+background: linear-gradient(0deg, rgba(27, 19, 150, 1) 0%, rgba(60, 60, 150, 1) 17%, rgba(181, 211, 217, 1) 100%);
+background-size: 100%;
+background-repeat: no-repeat;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    margin-top: 50px;
+    transition: 2s;
+}
+h1:hover{
+    background-color: rgb(85, 166, 212);
+}
+
+h3{
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    transition: 2s;
+}
+h3:hover{
+    color: white;
+    background-color: rgb(85, 166, 212);
+}
+
+
+
