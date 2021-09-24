@@ -23,8 +23,8 @@ export function selecionaDaCalculadora(){
     
     const numbers = document.querySelectorAll(".number__selector").forEach(number => {
             number.addEventListener('click', (event) =>{
-                clicouEmNumero(output)
-                output.textContent += event.target.value;
+                clicouEmNumero(output);
+                output.textContent += event.target.innerHTML;
                 isTrue = true;
                 clicouTrue(true);
                 isTrue = false;

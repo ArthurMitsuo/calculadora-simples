@@ -1,82 +1,73 @@
 ul{
     list-style: none; 
-
-    display: flex;
-    flex-wrap: wrap;
-}
-/* operações */
-.operations{
-    justify-content: space-evenly;
-    text-align: center;
-    padding:0;
-}
-.operation{
-    background-color: rgb(180, 179, 179);
-    border: 1px solid black;
-    border-radius: 5px;
-    color: black;
-    width: 20%;
-}
-.operation:hover{
-    background-color: rgb(112, 209, 241);
-    box-shadow: 0.4px 0 5px black;
-}
-/* números*/
-.numbers{
-    text-align: center;
-    justify-content: space-evenly;
-    padding: 0;
-    margin: 0;
-}
-.number{
-    background-color: rgb(180, 179, 179);
-    border: 0.03px solid rgb(58, 110, 110);
-    border-radius: 5px;
-    height: 100%;
-    font-size: 2rem;
-    margin: 4px;
-    width: 30%;
-}
-.number:hover{
-    background-color: lightblue;
-    box-shadow: 0.4px 0 5px black;
 }
 
-/*botões reset e apaga*/
-.reset{
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.reset__item{
-    width: 49.4%;
-    border:1px inset rgb(17, 92, 143);
-    border-radius: 2px;;
-    background-color: rgb(180, 179, 179);
-}
-.reset__item:hover{
-    background-color: darkred;
-    color:white;
-}
-
-/*container principal*/
 .container {
-    background-color: rgb(199, 195, 195);
-    border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 0.75px 0.75px 5px black;
-    justify-content: center;
-    margin: 0 auto;
-    position: relative;
-    top: 30px;
-    width: 350px;
-    z-index: 3;
+    border-radius: 25px;
+    box-shadow: 1px 1px 3px 2px rgb(75, 73, 73);
+
+    background-color: #9292D4;
+    border:1px solid black;
+    width: 400px;
+    position:relative;
+    justify-content: stretch;
+    align-content: stretch;
+    justify-items: center;
+    align-items: center;
+    padding: 10px 15px 15px 15px;
+    margin: 50px auto 0 auto;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: "display display display display"
+                        "reset apaga divide multiply"
+                        "numberSeven numberEight numberNine minus"
+                        "numberFour numberFive numberSix plus"
+                        "numberOne numberTwo numberThree equals"
+                        "numberZero numberZero comma equals";
 }
-.container-z{
-    z-index: 0;
-    background-color: black;
-    opacity: 100%;
+
+#display{grid-area: display}
+#reset{grid-area: reset}
+#apaga{grid-area: apaga}
+#number__seven {grid-area: numberSeven}
+#number__eight {grid-area: numberEight}
+#number__nine{grid-area: numberNine}
+#number__four{grid-area: numberFour}
+#number__five{grid-area: numberFive}
+#number__six{grid-area: numberSix}
+#number__one{grid-area: numberOne}
+#number__two{grid-area: numberTwo}
+#number__three{grid-area: numberThree}
+#number__zero{grid-area: numberZero}
+#operation__sum{grid-area: plus}
+#operation__subtraction{grid-area: minus}
+#operation__multiplication{grid-area: multiply}
+#operation__division{grid-area: divide}
+#equals{grid-area: equals}
+
+.grid-item{
+    text-align: center;
+    width: 100%;
+    height: 80%;
+    padding-top: 2vh;
+
+    background-color: #92B5D4;
+    border:1px solid black;
+    border-radius: 5px;
 }
+.equals{
+    align-content: center;
+    height: 90%;
+}
+.grid-item:hover{
+    background-color: #AAE6F6;
+}
+
+
+
 
 /* divs laterais*/
 
@@ -103,14 +94,15 @@ ul{
     background-color: rgba(122, 120, 120, 0.418);
     border: 1px solid black;
     border-radius: 20px;
-    height: 100%;
+    height: 70vh;
     position: absolute;
-    right: -15px;
+    right: 56px;
     text-align: center;
-    top: 0;
+    top: 12.5vh;
     transition: right 2s;
     width: 200px;
-    z-index: -5;     
+    z-index: -1;   
+    
 }
 .container__right-hidden{
     visibility: hidden;

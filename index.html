@@ -12,42 +12,36 @@
         <title>Calculadora Simples</title>
     </head>
     <body>       
-        <div class="container container-z"> 
-            <p class="display">0</p>
-            <div class='reset'>
-                <p class='reset__item' id='reset'>Reset (R)</p>
-                <p class='reset__item' id='apaga'>Apaga (B)</p>  
-            </div>
+        <section class="container container-z"> 
+            <p class="display" id="display">0</p>
+            
+            <p class='grid-item reset__item' id='reset'>Reset (R)</p>
+            <p class='grid-item reset__item' id='apaga'>Apaga (B)</p>  
 
-            <ul class="operations">
-                <li class="operation" id="operation__sum" value="+" data-operation="sum" value="+">+</li>
-                <li class="operation" id="operation__subtraction" data-operation="subtraction" value="-">-</li>
-                <li class="operation" id="operation__multiplication" data-operation="multiplication" value="*">*</li>
-                <li class="operation" id="operation__division" data-operation="division" value="/">/</li>
-            </ul>
-            <ul class="numbers">
-                <li class="number number__selector" id="number__seven" value="7">7</li>
-                <li class="number number__selector" id="number__eight" value="8">8</li>
-                <li class="number number__selector"  id="number__nine" value="9">9</li>
+            <p class="grid-item operation" id="operation__sum" value="+" data-operation="sum" value="+">+</p>
+            <p class="grid-item operation" id="operation__subtraction" data-operation="subtraction" value="-">-</p>
+            <p class="grid-item operation" id="operation__multiplication" data-operation="multiplication" value="*">*</p>
+            <p class="grid-item operation" id="operation__division" data-operation="division" value="/">/</p>
+        
+            <p class="grid-item number number__selector" id="number__seven" value="7">7</p>
+            <p class="grid-item number number__selector" id="number__eight" value="8">8</p>
+            <p class="grid-item number number__selector"  id="number__nine" value="9">9</p>
+        
+            <p class="grid-item number number__selector"  id="number__four" value="4">4</p>
+            <p class="grid-item number number__selector"  id="number__five" value="5">5</p>
+            <p class="grid-item number number__selector"  id="number__six" value="6">6</p>
+        
+            <p class="grid-item number number__selector"  id="number__one" value="1">1</p>
+            <p class="grid-item number number__selector"  id="number__two" value="2">2</p>
+            <p class="grid-item number number__selector"  id="number__three" value="3">3</p> 
+            <p class="grid-item number number__selector" id="number__zero" value="0">0</p>
+            <p class="grid-item number comma" id="comma" value="."> . </p>
+        
+            <p id="equals" class="grid-item equals">=</p>
             
-                <li class="number number__selector"  id="number__four" value="4">4</li>
-                <li class="number number__selector"  id="number__five" value="5">5</li>
-                <li class="number number__selector"  id="number__six" value="6">6</li>
-            
-                <li class="number number__selector"  id="number__one" value="1">1</li>
-                <li class="number number__selector"  id="number__two" value="2">2</li>
-                <li class="number number__selector"  id="number__three" value="3">3</li> 
-                <li class="number number__selector" id="number__zero" value="0">0</li>
-                <li class="number comma" id="comma" value="."> . </li>
-            </ul>
-            <ul class="equals" >
-                <li id="equals">Calcula</li>
-            </ul>
-            <!-- <div class="container__left operations"></div> -->
-            <div class="container__right-hidden container__right results"><p class="container__texto-grande">Contas realizadas:</p></div>
-            <div class="results little-container__right"><p class="container__texto-pequeno">Contas...</p></div>
-        </div>
-        <section>
+        </section>
+        <div class=" container__right results"><p class="container__texto-grande">Contas realizadas:</p></div>
+        <section class="text">
             <h1>Calculadora simples</h1>
             <h3>Podem ser utilizadas as teclas numéricas e de cada operação no teclado, assim como clicar em cada uma delas.</h3>
             <h4>A divisão para números decimais é com o ponto, mas a tecla de vírgula funciona também</h4>

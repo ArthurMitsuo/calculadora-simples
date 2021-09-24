@@ -4,10 +4,10 @@ import {salvaContaFeita} from './sideDivs.js'
 //contador para verificar posição do separador decimal
 let contador = 1;
 
+
 //valida o click no botão chamado de vírgula, que, na verdade, é um ponto
 export function clicouVirgula(comma, output){
     const value = '.';
-
     if(contador === 1){
         if(output.textContent == '0' || output.textContent == 0){
             output.textContent += value;
@@ -20,8 +20,10 @@ export function clicouVirgula(comma, output){
         } 
     }else{
         console.log('vírgula, já clicado');
+        
     }      
 }
+
 
 //validam os clicks nos botões de operação
 export function clicouOperaracao(calculatorShortMemory, output){
@@ -81,7 +83,6 @@ export function clicouCalcula(calculatorShortMemory, output){
 }
 //botão reset e função reset
 export function reset(calculatorShortMemory, output){
-    
     contador = 1;
     calculatorShortMemory.storagedNumber = undefined;
     calculatorShortMemory.operation= undefined;

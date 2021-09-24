@@ -3,13 +3,7 @@ const littleContainerRight = document.querySelector('.little-container__right');
 let div = document.querySelector(".container__right");
 let array = []
 
-littleContainerRight.addEventListener('click', () =>{
 
-    littleContainerRight.classList.add('little-container__right-hidden')
-    containerRight.classList.remove('container__right-hidden')
-    containerRight.classList.add('container__right-normal');
-    console.log(containerRight.classList);   
-});
 containerRight.addEventListener('click', () => {
     littleContainerRight.classList.remove('little-container__right-hidden')
     containerRight.classList.remove('container__right-normal');
