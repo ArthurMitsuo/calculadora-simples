@@ -44,19 +44,13 @@ containerRight.addEventListener("mouseup", dragEnd);
 containerRight.addEventListener("mousemove", drag); 
 
 function dragStart(e){
-    active = true;
+    if(e.target == containerRight){
+        active = true;
+    }
     target = e.target;
-    if(target !== null){
-        if(!target.xOffset){
-            target.xOffset = 0;
-        }
-        if(!target.yOffset){
-            target.yOffset = 0;
-        }
-
-        target.initialX = target.clientX - target.xOffset;
-        target.initialY = target.clientY - target.yOffset;
-    }  
+    
+    initialX = e.clientX - xOffset;
+    initialY = e.clientY - yOffset;
 }
 
 function dragEnd(){
@@ -70,13 +64,13 @@ function drag(e){
     if(active){
         e.preventDefault();
 
-        target.currentX = e.clientX - target.initialX;
-        target.currentY = e.clientY - target.initialY;
+        currentX = e.clientX - initialX;
+        currentY = e.clientY - initialY;
 
-        target.xOffset = target.currentX;
-        target.yOffset = target.currentY;
+        xOffset = currentX;
+        yOffset = currentY;
 
-        setTranslate(target.currentX, target.currentY, target)
+        setTranslate(currentX, currentY, target)
     }
 }
 
