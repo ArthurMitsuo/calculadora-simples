@@ -11,3 +11,55 @@
     width: 90%;
 }
 
+.checkbox__container{
+    background-color:rgba(122, 120, 120, 0.418);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 20px 5px 5px;
+    
+    top: 80vh;
+    z-index: 0;
+
+    width: 300px;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 1008px){
+    .checkbox__container{
+        visibility: hidden;
+    }
+}
+
+
+
+
+.container__right{
+    background-color: rgba(122, 120, 120, 0.418);
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 70vh;
+    position: absolute;
+    right: 56px;
+    text-align: center;
+    top: 12.5vh;
+    transition: visibility 2s, opacity 3s linear;
+    width: 300px;
+    z-index: 1;
+
+    padding: 20px 0;
+}
+.container__right-hidden {
+    visibility: hidden;
+    
+}
+
+#button{
+    position: absolute;
+    bottom: 5%;
+    left: 40%;
+    right: 40%;
+}
+
+
+

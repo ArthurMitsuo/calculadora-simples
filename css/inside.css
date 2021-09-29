@@ -16,6 +16,7 @@ ul{
     align-items: center;
     padding: 10px 15px 15px 15px;
     margin: 50px auto 0 auto;
+    z-index: 5;
     
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -71,73 +72,6 @@ ul{
 
 /* divs laterais*/
 
-.container__left{
-    align-items: center;
-    background-color: rgba(163, 159, 159, 0.418);
-    border: 1px solid black;
-    border-radius: 20px;
-    float:initial;
-    height: 100%;
-    left: -15px;
-    position: absolute;
-    top: 0;
-    transition: left 1s;
-    width: 200px;
-    z-index: -5; 
-}
-.container__left:hover{
-    left: -25px;
-    background-image: black;
-}
-
-.container__right{
-    background-color: rgba(122, 120, 120, 0.418);
-    border: 1px solid black;
-    border-radius: 20px;
-    height: 70vh;
-    position: absolute;
-    right: 56px;
-    text-align: center;
-    top: 12.5vh;
-    transition: right 2s;
-    width: 200px;
-    z-index: -1;   
-    
-}
-.container__right-hidden{
-    visibility: hidden;
-    transition: 0.10s;
-}
-
-.container__right-normal{
-    right: -180px;
-    visibility: normal;
-    transition: right 1s;
-}
-
-.little-container__right{
-    background-color: rgba(122, 120, 120, 0.418);
-    border: 1px solid black;
-    border-radius: 0 25px 25px 0;
-    height: 75%;
-    position: absolute;
-    right: -15px;
-    text-align: center;
-    top: 50px;
-    transition: 3s;
-    width: 18px;
-    z-index: -5;
-}
-.little-container__right-hidden{
-    visibility: hidden;
-}
-.little-container__right:hover{
-    width: 35px;
-    right: -20px;
-    height: 100%;
-    top: 0;
-    transition: top 0.5s, height 0.5s;
-}
 
 .container__texto-grande{
     position: relative;

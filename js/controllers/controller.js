@@ -8,15 +8,16 @@ let contador = 1;
 //valida o click no botão chamado de vírgula, que, na verdade, é um ponto
 export function clicouVirgula(comma, output){
     const value = '.';
+    verificaVirgula(output);
     if(contador === 1){
         if(output.textContent == '0' || output.textContent == 0){
             output.textContent += value;
             contador++;
-            console.log(contador)
+            
         }else{
             output.textContent += value;
             contador++;
-            console.log(contador)
+            
         } 
     }else{
         console.log('vírgula, já clicado');
@@ -24,6 +25,15 @@ export function clicouVirgula(comma, output){
     }      
 }
 
+export function verificaVirgula(output){
+    let array = output.textContent.split('');
+    array.forEach((item, indice)=>{
+        if(item == "."){
+            contador = 2;
+        }
+    });
+   
+}
 
 //validam os clicks nos botões de operação
 export function clicouOperaracao(calculatorShortMemory, output){

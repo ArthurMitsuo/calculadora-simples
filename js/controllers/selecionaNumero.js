@@ -1,4 +1,4 @@
-import { clicouVirgula, clicouOperaracao, clicouCalcula,clicouEmNumero, clicouReset, clicouApaga, verificaZeroTecla} from "./controller.js";
+import { verificaVirgula, clicouVirgula, clicouOperaracao, clicouCalcula,clicouEmNumero, clicouReset, clicouApaga, verificaZeroTecla} from "./controller.js";
 
 
 const $ = document.querySelector.bind(document);
@@ -11,6 +11,8 @@ export function selecionaDaCalculadora(){
     storagedNumber: undefined,
     operation: undefined
     }
+
+    verificaVirgula(output);
     
     const comma = document.querySelector(".comma").addEventListener('click', (evento)=>{ 
         clicouVirgula(comma, output);   
